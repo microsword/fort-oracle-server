@@ -1,0 +1,23 @@
+server:
+  port: 9993
+spring:
+  oracle-forward:
+    oauth:
+      clientId: fort
+      clientSecret: j1d1sec.c0m
+      scope: web
+      tokenUrl: http://dev.server:8080/fort-auth-server/oauth/token
+      refreshTokenUrl: http://dev.server:8080/fort-auth-server/oauth/token
+      checkTokenUrl: http://dev.server:8080/fort-auth-server/oauth/check_token
+    server:
+      userServerUrl: http://dev.server:8080/fort-user-server
+      resourceServerUrl: http://dev.server:8080/fort-resource-server
+      ruleServerUrl: http://dev.server:8080/fort-rule-server
+      logServerUrl: http://dev.server:8080/fort-log-server
+      ssoServerUrl: http://dev.server:8080/fort-sso-server
+  netty:
+    oracle:
+      server:
+        port: 1521
+logging:
+  config: classpath:log4j2.xml
