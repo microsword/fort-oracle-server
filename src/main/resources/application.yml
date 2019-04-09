@@ -1,6 +1,9 @@
 server:
   port: 9993
 spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
   oracle-forward:
     oauth:
       clientId: fort
